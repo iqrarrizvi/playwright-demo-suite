@@ -1,0 +1,40 @@
+// Interaction actions — passed as the first argument to ActionsHelper.actionMethod()
+export const ActionTypes = {
+  CLICK:               'click',
+  CLICKVIAJS:          'clickViaJs',
+  DOUBLECLICK:         'doubleClick',
+  SETTEXT:             'setText',
+  PRESS:               'press',
+  CHECK:               'check',
+  UNCHECK:             'uncheck',
+  HOVER:               'hover',
+  HOVER_FORCE:         'hoverForce',
+  SETDROPDOWN:         'selectByLabel',
+  SETDROPDOWNVIAVALUE: 'selectByValue',
+  UPLOADFILE:          'uploadFile',
+  SETATTRIBUTE:        'setAttribute',
+  GETTEXT:             'getText',
+  RETURNELEMENT:       'returnElement',
+  NAVIGATETOURL:       'navigateTo',
+};
+
+// Assertion actions — verify element state without returning a value
+export const AssertionType = {
+  EQUALCHECK:              'equalCheck',
+  CONTAINTEXT:             'containText',
+  DISPLAYED:               'displayed',
+  NOTDISPLAYED:            'notDisplayed',
+  ENABLED:                 'enabled',
+  DISABLED:                'disabled',
+  ISHIDDEN:                'isHidden',
+  NOTEXIST:                'notExist',
+  TABLEDATAEXISTS:         'tableDataExists',
+  PROPERTYCHECK:           'propertyCheck',
+  ATTRIBUTENOTEXIST:       'attributeNotExist',
+  VERIFYHAVECLASS:         'hasClass',
+  VERIFYHAVECLASSPATTERN:  'hasClassPattern',
+  VERIFYELEMENTCHECKED:    'isChecked',
+  VERIFYELEMENTNOTCHECKED: 'isNotChecked',
+  POPULATED:               'isPopulated',
+  INBETWEEN:               'dateBetween',
+};

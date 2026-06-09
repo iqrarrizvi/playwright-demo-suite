@@ -1,0 +1,15 @@
+export const inventoryPageLocators = {
+    pageHeading: ".title",
+    inventoryItems: ".inventory-item",
+    itemName: ".inventory-item-name",
+    itemPrice: ".inventory-item-price",
+    addToCartFirstItem: ".inventory-item:first-child [data-test^='add-to-cart']",
+    removeFirstItem: ".inventory-item:first-child [data-test^='remove']",
+    addToCartByName: (slug) => `[data-test='add-to-cart-${slug}']`,
+    removeByName: (slug) => `[data-test='remove-${slug}']`,
+    cartBadge: ".shopping_cart_badge",
+    cartLink: ".shopping_cart_link",
+    sortDropdown: "[data-test='product-sort-container']",
+    burgerMenu: "#react-burger-menu-btn",
+    logoutLink: "#logout_sidebar_link",
+};
