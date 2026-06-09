@@ -4,6 +4,7 @@ import ActionsHelper from "../Actions/ActionHelper.js";
 import { ActionTypes, AssertionType } from "../Utils/actions.js";
 import { inventoryPageLocators } from "../pageObjects/InventoryObjects.js";
 
+
 test.describe("Smoke Tests", { tag: ['@smoke'] }, () => {
 
   test("Login lands on products page", async ({ page }) => {
@@ -13,8 +14,7 @@ test.describe("Smoke Tests", { tag: ['@smoke'] }, () => {
   });
 
   test("Products page shows inventory items", async ({ page }) => {
-    const actionHelper = new ActionsHelper(page);
-    await actionHelper.actionMethod(AssertionType.TABLEDATAEXISTS, inventoryPageLocators.inventoryItems);
+    await expect(page.locator(inventoryPageLocators.inventoryItems)).toHaveCount(6, { timeout: 30000 });
   });
 
   test("Logout redirects to login page", async ({ page }) => {
